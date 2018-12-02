@@ -4,7 +4,7 @@
  * Ulaz:   a, b, n
  * Izlaz:  aproksimacija vrednosti integrala od a do b funkcije f(x) koristeci n jednakih intervala.
  *
- * Kompajliranje: gcc -g -Wall -fopenmp -o omp_sf2.c omp_sf2.c
+ * Kompajliranje: gcc -g -Wall -lm -fopenmp -o omp_sf2.c omp_sf2.c
  * Upotreba:   ./omp_sf2 <broj_niti>
  *
  */
@@ -53,7 +53,7 @@ void Usage(char* prog_name) {
 
 double f(double x) {
 	double result;
-	result = x*x;
+	result = sin(x)*x;
 	return result;
 }
 
