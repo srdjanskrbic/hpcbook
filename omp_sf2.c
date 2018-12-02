@@ -53,7 +53,7 @@ void Usage(char* prog_name) {
 
 double f(double x) {
 	double result;
-	result = sin(x)*x;
+	result = sin(x)/x;
 	return result;
 }
 
