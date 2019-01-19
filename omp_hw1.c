@@ -12,13 +12,12 @@
 #include <stdio.h>
 
 int main (int argc, char *argv[]) {
-  int numThreads, tid;
-#pragma omp parallel private(numThreads, tid)
+#pragma omp parallel
   {
-    tid = omp_get_thread_num();
+    int tid = omp_get_thread_num();
     printf("Zdravo svete od niti broj %d\n", tid);
     if (tid == 0){
-        numThreads = omp_get_num_threads();
+        int numThreads = omp_get_num_threads();
         printf("Ukupan broj niti je %d\n", numThreads);
     }
   }
